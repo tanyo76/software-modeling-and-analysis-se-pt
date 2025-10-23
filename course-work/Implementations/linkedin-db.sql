@@ -1,4 +1,6 @@
-CREATE DATABASE linkedin;
+DROP DATABASE IF EXISTS linkedin;
+
+CREATE DATABASE IF NOT EXISTS linkedin;
 
 USE linkedin;
 
