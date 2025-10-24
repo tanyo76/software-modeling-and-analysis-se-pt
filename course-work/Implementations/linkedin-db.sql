@@ -4,8 +4,6 @@ CREATE DATABASE IF NOT EXISTS linkedin;
 
 USE linkedin;
 
--- :TODO Create 2 stored procedures, functions and triggers
-
 CREATE TABLE USER (
     UserID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,

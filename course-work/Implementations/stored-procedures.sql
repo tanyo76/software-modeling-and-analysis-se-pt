@@ -26,5 +26,14 @@ BEGIN
     ORDER BY we.StartDate DESC;
 END //
 
+CREATE PROCEDURE MostUsedSkills()
+BEGIN
+    SELECT s.SkillName, COUNT(u.UserID)
+    FROM USER_SKILL us
+    JOIN USER u ON us.UserID = u.UserID
+    JOIN SKILL s ON us.SkillID = s.SkillID
+    GROUP BY s.SkillName;
+END //
+
 -- Usage example:
 -- CALL GetUserProfileSummary(1);
